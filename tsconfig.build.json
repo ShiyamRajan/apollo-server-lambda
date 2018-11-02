@@ -1,0 +1,15 @@
+{
+  "compilerOptions": {
+    "composite": true
+  },
+  "files": [
+    "src/ApolloServer.ts",
+    "src/index.ts",
+    "src/lambdaApollo.ts",
+  ],
+  "include": [],
+  "exclude": [
+        "node_modules",
+        "src/__tests__/*"
+  ]
+}

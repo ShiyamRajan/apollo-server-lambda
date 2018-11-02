@@ -15,6 +15,21 @@
     "type": "git",
     "url": "https://github.com/apollographql/apollo-server/tree/master/packages/apollo-server-lambda"
   },
+  "scripts": {
+    "clean": "git clean -dfqX -- ./node_modules **/{dist,node_modules}/",
+    "compile": "tsc --build tsconfig.build.json",
+    "compile:clean": "tsc --build tsconfig.build.json --clean",
+    "watch": "tsc --build tsconfig.build.json --watch",
+    "lint": "prettier-check '**/*.{js,ts}'",
+    "lint-fix": "prettier '**/*.{js,ts}' --write",
+    "test": "jest --verbose",
+    "test:clean": "jest --clearCache",
+    "test:watch": "jest --verbose --watchAll",
+    "testonly": "npm test",
+    "test:ci": "npm run coverage -- --ci --maxWorkers=2  --reporters=default --reporters=jest-junit",
+    "coverage": "npm test -- --coverage",
+    "coverage:upload": "codecov"
+  },
   "homepage": "https://github.com/apollographql/apollo-server#readme",
   "bugs": {
     "url": "https://github.com/apollographql/apollo-server/issues"
